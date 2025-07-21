@@ -29,12 +29,12 @@ export class QuestionsComponent {
   }
 
 sendWelcome() {
-  const welcomeMessage = "Bonjour, je suis WorkoTn, votre assistant Workoo. Posez-moi une question !";
+  const welcomeMessage = "Bonjour, je suis Rahal, votre assistant Workoo. Posez-moi une question !";
   this.messages.push({ role: 'assistant', content: welcomeMessage });
   this.history = [
     {
       role: "system",
-      content: "You are WorkoTn, Workoo assistant. Always answer in a polite and helpful way."
+      content: "You are Rahal, WorkoTn assistant. Always answer in a polite and helpful way."
     }
   ];
 }

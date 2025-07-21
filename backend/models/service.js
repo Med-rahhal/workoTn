@@ -1,15 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose=require('mongoose');
+const serviceschema=new mongoose.Schema({
 
-const serviceschema = new mongoose.Schema({
-  name: String,
-  categorie: String,
-  location: String,
-  salary: Number,
-  description: String,
-  image: String,
-  idUser: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
-}, {
-  timestamps: true // ✅ Ajoute automatiquement createdAt et updatedAt
-});
+name:String,
+categorie:String,
+location:String,
+salary:Number,
+description:String,
+image:String,
+idUser:{type: mongoose.Schema.Types.ObjectId , ref:'User'}//cle etrangére
 
-module.exports = mongoose.model('Service', serviceschema);
+//user admet plusieur service
+
+})
+
+module.exports=mongoose.model('Service',serviceschema);
